@@ -4,7 +4,7 @@
 
 # 🎬 GUI_FFmpeg
 
-**A beautiful, beginner-friendly desktop app for compressing videos — powered by ffmpeg.**
+**A Beginner-friendly desktop app for compressing videos — powered by ffmpeg.**
 
 No command line. No manual ffmpeg install. Just pick a video, choose how much smaller you want it, and go.
 
