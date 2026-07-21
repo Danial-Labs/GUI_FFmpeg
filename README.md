@@ -29,12 +29,6 @@ No command line. No manual ffmpeg install. Just pick a video, choose how much sm
 
 ---
 
-## 🖥️ Screenshots
-
-> _Add a screenshot or GIF of the app here once you have one — drag an image into this section on GitHub and it'll render automatically._
-
----
-
 ## 🚀 Getting started
 
 ### Option A — Run from source
@@ -63,58 +57,6 @@ Check the [Releases](../../releases) page for a ready-to-run `.exe` (Windows) or
    - **Keep quality** — pick a codec (H.265 for smaller files, H.264 for wider compatibility) and a quality level.
 4. *(Optional)* Choose a custom output location.
 5. Hit **Start compressing** and watch the progress bar. When it's done, you can jump straight to the output folder.
-
----
-
-## 🛠️ Building a standalone executable
-
-The project ships with everything needed to package itself into a single `.exe` / binary via [PyInstaller](https://pyinstaller.org/).
-
-**Windows** — just double-click:
-```bash
-build_windows.bat
-```
-
-**macOS / Linux:**
-```bash
-./build_unix.sh
-```
-
-Or run it manually:
-```bash
-pip install pyinstaller
-pyinstaller build.spec
-```
-
-The output lands in `dist/GUI_FFmpeg(.exe)`. Windows builds also embed file metadata (company, product name, credit) from `version_info.txt`, and you can drop in your own `icon.ico` / `icon.icns` and point `build.spec`'s `icon=` field at it for a custom app icon.
-
-### Automated builds via GitHub Actions
-
-Push a version tag and GitHub will build Windows, macOS, and Linux executables for you automatically:
-
-```bash
-git tag v1.0.0
-git push origin v1.0.0
-```
-
-Grab the results from the **Actions** tab (or attach them to a **Release**).
-
----
-
-## 📁 Project structure
-
-```
-GUI_FFmpeg/
-├── main.py                       # GUI (CustomTkinter)
-├── ffmpeg_manager.py             # ffmpeg detection / auto-download / install
-├── compressor.py                 # video analysis + ffmpeg command building
-├── requirements.txt
-├── build.spec                    # PyInstaller build configuration
-├── version_info.txt              # Windows exe metadata
-├── build_windows.bat             # one-click Windows build
-├── build_unix.sh                 # one-click macOS/Linux build
-└── .github/workflows/build.yml   # CI: builds executables on version tags
-```
 
 ---
 
